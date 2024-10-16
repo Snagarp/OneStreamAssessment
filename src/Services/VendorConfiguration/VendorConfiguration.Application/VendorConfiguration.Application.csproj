@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Behaviors\**" />
+	  <Compile Remove="DomainEventHandlers\**" />
+	  <Compile Remove="IntegrationEvents\**" />
+	  <EmbeddedResource Remove="Behaviors\**" />
+	  <EmbeddedResource Remove="DomainEventHandlers\**" />
+	  <EmbeddedResource Remove="IntegrationEvents\**" />
+	  <None Remove="Behaviors\**" />
+	  <None Remove="DomainEventHandlers\**" />
+	  <None Remove="IntegrationEvents\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisbleTo Include="VendorConfiguration.IntegrationTests, VendorConfiguration.Test"></InternalsVisbleTo>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="MediatR" Version="12.1.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+		<PackageReference Include="OneOf" Version="3.0.263" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Serilog" Version="3.0.1" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\EventBus\EventBusServiceBus\EventBusServiceBus.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\EventBus\IntegrationsEventLogEF\IntegrationsEventLogEF.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\HybridModelBinding\HybridModelBinding\HybridModelBinding.csproj" />
+		<ProjectReference Include="..\VendorConfiguration.Infrastructure\VendorConfiguration.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>

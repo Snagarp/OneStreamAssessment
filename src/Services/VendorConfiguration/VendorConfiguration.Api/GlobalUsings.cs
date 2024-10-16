@@ -1,0 +1,17 @@
+global using Autofac;
+global using Autofac.Extensions.DependencyInjection;
+global using Azure.Extensions.AspNetCore.Configuration.Secrets;
+global using Common.Validation;
+global using FluentValidation;
+global using HealthChecks.UI.Client;
+global using MediatR;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Server.Kestrel.Core;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Diagnostics.HealthChecks;
+global using Microsoft.OpenApi.Models;
+global using Serilog;
+global using System.Data.Common;
+global using System.Net;
+global using System.Reflection;
