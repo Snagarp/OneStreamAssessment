@@ -7,16 +7,14 @@ It provides functionality to manage vehicles, including creating, updating, dele
 User needs to Login firt to mange and it currently supports to define differe Role typesS (Admin, BusineesUser, Supportuser). the initial version has two API Account and Vehicle
 
 Features
-User Authentication: Secure user login and role management using JWT token flow.
-Vehicle Management: Add, update, delete, and retrieve vehicle details.
-Vehicle Brand Management: Manage vehicle brands.
-Vehicle Owner Management: Manage vehicle owners.
-Presentiaton:
-Web api: Followed RESTful API's that include Entity framework access and migrations
-Responsive UI: A user-friendly interface built using Blazor,.Net8
-Component Architecture: Followed Clean architecure,Design is flexible to enhance and scale up horizontally, 
-Middleware & Configuration: Need to setup middleware ,depedency injections, configuring services, components with data-binding, routing between them.
-Unit Testing: Written possible test cases to test web api's / components using xUnit.
+Microservice Architecture: The solution employs a microservice architecture pattern combined with clean architecture principles.
+Backend for Frontend (BFF): This can be utilized as an API Gateway, facilitating server-side discovery to route requests to available microservice instances.
+User Authentication: The API Gateway authenticates users and passes an access token to the corresponding services.
+API Composition: Query patterns have been implemented to support efficient API composition.
+CQRS: The solution supports Command Query Responsibility Segregation, ensuring that the application keeps the database up to date by subscribing to domain events.
+Hybrid Model Binding: This feature has been thoroughly tested.
+Testing: Test cases have been added specifically for the API methods.
+JWT Token Authentication: The implementation includes JWT token-based authentication.
 
 # Getting Started
 1. Prerquisite:
